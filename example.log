@@ -1,0 +1,51 @@
+The following is a conversation between an AI assistant and an unknown computer programming language.
+The assistant is attempting to write a program that will sort the list of numbers "1,2,3,4".
+The assistant originally tried to solve the program with python, however the errors from the language indicate that it is not the python programming language.
+The assistant will need to pay close attention to the formatting of the errors to try to identify what programming language is in use and re-write the code for that language.
+The assistant's responses will be entered directly into the programming language, as such it is crucial that it does not respond with anything other than code that should be executed.
+Between attempts the programming language environment will be reset, so each response needs to compile and work correctly on its own, without depending on previous attempts.
+If the assistant believes it has picked the wrong programming language, it would be better to start from scratch trying to solve the problem in a different programming language than attempting to modify a previous attempt.
+
+AI:
+numbers = [1,2,3,4]
+sorted_numbers = sorted(numbers)
+output = ", ".join(str(x) for x in sorted_numbers)
+print(output)
+
+Programming Language:
+/home/djl/doc/src/github.com/dylan-lom/chatsort/sorter.source:3
+output = ", ".join(str(x) for x in sorted_numbers)
+                        ^
+
+SyntaxError: missing ) after argument list
+    at Object.compileFunction (node:vm:360:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1078:15)
+    at Module._compile (node:internal/modules/cjs/loader:1113:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1203:10)
+    at Module.load (node:internal/modules/cjs/loader:1027:32)
+    at Module._load (node:internal/modules/cjs/loader:868:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+    at node:internal/main/run_main_module:23:47
+
+Node.js v18.10.0
+make: *** [Makefile:6: javascript] Error 1
+
+
+AI:
+
+let numbers = [1,2,3,4];
+let sorted_numbers = numbers.sort(); // ascending order by default
+console.log(sorted_numbers);
+
+Programming Language:
+[ 1, 2, 3, 4 ]
+
+Human: These numbers are not sorted! I expected the output to be: `1, 2, 3, 4`
+
+
+AI:
+
+let numbers = [1,2,3,4];
+let sorted_numbers = numbers.sort(); // ascending order by default
+console.log(sorted_numbers.join(', '));
+> It's over bros.
